@@ -6,6 +6,7 @@ Welcome to the **ML and Math Topics Implementations in Python** repository! This
 
 1. [Introduction](#introduction)
 2. [Linear Algebra](#linear-algebra)
+    - 2.1 
 3. [Calculus](#Calculus)
    
 ## Introduction
@@ -13,5 +14,7 @@ Welcome to the **ML and Math Topics Implementations in Python** repository! This
 This repositary aims to contain implementaions of machine learning, mathematics, and statistics using Python. I will be upgrading this repository as I progress through my journey of learning the basics of Machine Learning. 
 
 ## Linear Algebra
+
+2.1
 
 ## Calculus
