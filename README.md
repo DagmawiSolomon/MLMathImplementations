@@ -6,15 +6,15 @@ Welcome to the **ML and Math Topics Implementations in Python** repository! This
 
 1. [Introduction](#introduction)
 2. [Linear Algebra](#linear-algebra)
-    - [2.1 Matrix Calculator](#2.1-matrix-calculator)
-3. [Calculus](#Calculus)
-   
+    - [Matrix Calculator](#matrix-calculator)
+3. [Calculus](#calculus)
+
 ## Introduction
 
-This repositary aims to contain implementaions of machine learning, mathematics, and statistics using Python. I will be upgrading this repository as I progress through my journey of learning the basics of Machine Learning. 
+This repository aims to contain implementations of machine learning, mathematics, and statistics using Python. I will be upgrading this repository as I progress through my journey of learning the basics of Machine Learning.
 
-# Linear Algebra
+## Linear Algebra
 
-<a href ="2.1-matrix-calculator">2.1 Matrix Calculator</a>
+### Matrix Calculator
 
-# Calculus
+## Calculus
