@@ -1,4 +1,4 @@
-class MatrixCalculator:
+class MatrixOperations:
     def __init__(self, arr):
         self.array = arr
 
