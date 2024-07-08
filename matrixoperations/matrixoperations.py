@@ -3,7 +3,12 @@ class MatrixOperations:
         pass
         
     def matrix(self,arr):
-        pass
+        if not isinstance(arr, list):
+            raise TypeError("Input must be a list")
+        for element in arr:
+            if not isinstance(element, (int,float)):
+                raise ValueError("All elements in the list be a number type(int or float)")
+    
     def multiply(self):
         pass
 
