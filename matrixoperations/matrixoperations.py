@@ -1,11 +1,14 @@
 class MatrixOperations:
     def __init__(self, matrix):
         self.matrix = matrix
+        self.validate_matrix()
         
-    def flatten(self,arr):
-        if not isinstance(arr, list):
+    def flatten(self):
+        pass
+    def validate_matrix(self):
+        if not isinstance(self.matrix, list):
             raise TypeError("Input must be a list")
-        for element in arr:
+        for element in self.matrix:
             if not isinstance(element, (int,float)):
                 raise ValueError("All elements in the list be a number type(int or float)")
             
