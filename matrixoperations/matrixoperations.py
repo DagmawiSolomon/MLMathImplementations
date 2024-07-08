@@ -1,14 +1,16 @@
 class MatrixOperations:
-    def __init__(self):
-        pass
+    def __init__(self, matrix):
+        self.matrix = matrix
         
-    def matrix(self,arr):
+    def flatten(self,arr):
         if not isinstance(arr, list):
             raise TypeError("Input must be a list")
         for element in arr:
             if not isinstance(element, (int,float)):
                 raise ValueError("All elements in the list be a number type(int or float)")
-    
+            
+    def flatten(self,arr):
+        pass
     def multiply(self):
         pass
 
