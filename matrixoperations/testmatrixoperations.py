@@ -24,6 +24,10 @@ class MatrixOperationsTestCase(unittest.TestCase):
     def test_init_with_empty_list(self):
         self.mp([])
     
+    def test_multidimensional_list(self):
+        self.mp([[1,2],[3,4]])
+        self.mp([[5,6],[7,8]])
+    
     
             
 if __name__ == '__main__':
