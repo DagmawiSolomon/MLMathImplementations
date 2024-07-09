@@ -27,6 +27,7 @@ class MatrixOperationsTestCase(unittest.TestCase):
     def test_multidimensional_list(self):
         self.mp([[1,2],[3,4]])
         self.mp([[5,6],[7,8]])
+        self.mp([[5,7,8],[4,5,8],[6,2,1]])
     
     
             
