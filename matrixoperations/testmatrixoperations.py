@@ -28,7 +28,13 @@ class MatrixOperationsTestCase(unittest.TestCase):
         self.mp([[1,2],[3,4]])
         self.mp([[5,6],[7,8]])
         self.mp([[5,7,8],[4,5,8],[6,2,1]])
-    
+        
+    def test_addition(self):
+        x = self.mp([[1,2],[3,4]])
+        self.assertEquals(x+x,[[2,4],[6,8]])
+    def test_sub(self):
+        x = self.mp([[1,2],[3,4]])
+        self.assertEquals(x-x,[[0,0],[0,0]])
     
             
 if __name__ == '__main__':
