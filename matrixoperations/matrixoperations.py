@@ -21,13 +21,13 @@ class MatrixOperations:
                 raise ValueError("All elements in the list be a number type(int or float)")
             
     
-    def multiply(self):
+    def __add__(self, other):
         pass
 
-    def addition(self):
+    def __sub__(self,other):
         pass
 
-    def subtraction(self):
+    def __mul__(self,other):
         pass
 
     def division(self):
