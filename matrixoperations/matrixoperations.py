@@ -30,17 +30,11 @@ class MatrixOperations:
     def __mul__(self,other):
         pass
 
-    def division(self):
+    def __floordiv__(self,other):
         pass
 
     def determinent(self):
         pass
 
 
-
-
-# import matrixoperations as matrix
-# x = mp.matrix([0,1,2])
-# y = mp.matrix([0,1,2])
-# x + y, x-y, x*y, x/y
 
