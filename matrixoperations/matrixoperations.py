@@ -35,6 +35,17 @@ class MatrixOperations:
 
     def determinent(self):
         pass
+    
+    def inverse(self):
+        pass
+    
+    def eigenvalues(self):
+        pass
+    
+    def eigenvectors(self):
+        pass
+    
+    
 
 
 
