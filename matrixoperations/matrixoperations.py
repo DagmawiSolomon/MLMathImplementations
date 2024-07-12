@@ -39,20 +39,26 @@ class MatrixOperations:
             
     
     def __add__(self, other):
-        if self.shape == other.shape:
-            sum = []
-            row,col = self.shape
-            for i in range(row):
-                local_sum = []
-                for j in range(col):
-                    local_sum.append(self.matrix[i][j] + other.matrix[i][j])
-                sum.append(local_sum)
-            return sum
+        if isinstance(other, type(self)):
+            if self.shape == other.shape:
+                result = []
+                row, col = self.shape
+                for i in range(row):
+                    row_result = []
+                    for j in range(col):
+                        row_result.append(self.matrix[i][j] + other.matrix[i][j])
+                    result.append(row_result)
+                return result
+            else:
+                raise ValueError("Matrices must have the same dimensions to add")
+        else:
+            raise TypeError("Unsupported operand type(s) for +: '{}' and '{}'".format(type(self).__name__, type(other).__name__))
+
             
         
 
     def __sub__(self,other):
-        pass
+       pass
 
     def __mul__(self,other):
         pass
