@@ -39,7 +39,17 @@ class MatrixOperations:
             
     
     def __add__(self, other):
-        pass
+        if self.shape == other.shape:
+            sum = []
+            row,col = self.shape
+            for i in range(row):
+                local_sum = []
+                for j in range(col):
+                    local_sum.append(self.matrix[i][j] + other.matrix[i][j])
+                sum.append(local_sum)
+            return sum
+            
+        
 
     def __sub__(self,other):
         pass
