@@ -43,9 +43,36 @@ class MatrixOperationsTestCase(unittest.TestCase):
             self.mp([[1,2],[3,4],[5,6,7]])
             
         
-    def test_addition(self):
-        x = self.mp([[1,2],[3,4]])
-        # self.assertEquals(x+x,[[2,4],[6,8]])
+def test_addition_with_2x2_matrix(self):
+    x = self.mp([[1, 2], [0, 0]])
+    y = self.mp([[1, 2], [0, 0]])
+    result = self.mp([[2, 4], [0, 0]])
+    self.assertEqual(x + y, result)
+
+    x = self.mp([[1, 2], [0, 0]])
+    y = self.mp([[0, 0], [0, 0]])
+    result = self.mp([[1, 2], [0, 0]])
+    self.assertEqual(x + y, result)
+
+    x = self.mp([[1, 2], [0, 0]])
+    y = self.mp([[-1, -2], [0, 0]])
+    result = self.mp([[0, 0], [0, 0]])
+    self.assertEqual(x + y, result)
+
+    x = self.mp([[1, 2], [0, 0]])
+    y = self.mp([[1.5, 2.5], [0.5, 0.5]])
+    result = self.mp([[2.5, 4.5], [0.5, 0.5]])
+    self.assertEqual(x + y, result)
+
+    x = self.mp([[1, 2], [0, 0]])
+    y = self.mp([[1, 2], [3, 4]])
+    with self.assertRaises(ValueError):
+        x + y
+        
+    x = self.mp([1, 2])
+    y = self.mp([2,3])
+    self.assertEqual(x+y, [3,5])
+    
     def test_sub(self):
         x = self.mp([[1,2],[3,4]])
         # self.assertEquals(x-x,[[0,0],[0,0]])
