@@ -4,6 +4,7 @@ class MatrixOperations:
     def __init__(self, matrix):
         self.matrix = matrix
         self.validate_matrix()
+        self.shape = self.get_shape()
        
                 
     def flatten(self):
@@ -11,6 +12,22 @@ class MatrixOperations:
             return list(chain.from_iterable(self.matrix))
         else:
             return self.matrix
+        
+    def get_shape(self):
+        if not self.matrix:
+            return (0,0)
+        
+        if isinstance(self.matrix[0], list):
+            num_rows = len(self.matrix)
+            num_cols = len(self.matrix[0])
+            
+            for row in self.matrix:
+                if len(row) != num_cols:
+                    raise ValueError("All rows must have the same number of columns")
+    
+            return (num_rows, num_cols)
+        else:
+            return (len(self.matrix),1) 
 
     def validate_matrix(self):
         
