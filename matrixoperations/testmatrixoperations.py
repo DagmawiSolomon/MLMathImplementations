@@ -31,51 +31,44 @@ class MatrixOperationsTestCase(unittest.TestCase):
         
     def test_get_shape(self):
         x_1 = self.mp([[1,2,3],[4,5,6]])
-        self.assertEquals(x_1.shape,(2,3))
+        self.assertEqual(x_1.shape,(2,3))
         
         x_2 = self.mp([1,2,4])
-        self.assertEquals(x_2.shape,(3,1))
+        self.assertEqual(x_2.shape,(3,1))
         
         x_3 = self.mp([])
-        self.assertEquals(x_3.shape,(0,0))
+        self.assertEqual(x_3.shape,(0,0))
         
         with self.assertRaises(ValueError):
             self.mp([[1,2],[3,4],[5,6,7]])
             
         
-def test_addition_with_2x2_matrix(self):
-    x = self.mp([[1, 2], [0, 0]])
-    y = self.mp([[1, 2], [0, 0]])
-    result = self.mp([[2, 4], [0, 0]])
-    self.assertEqual(x + y, result)
+    def test_addition(self):
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[1, 2], [0, 0]])
+        self.assertEqual(x + y, [[2, 4], [0, 0]])
 
-    x = self.mp([[1, 2], [0, 0]])
-    y = self.mp([[0, 0], [0, 0]])
-    result = self.mp([[1, 2], [0, 0]])
-    self.assertEqual(x + y, result)
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[0, 0], [0, 0]])
+        result = [[1, 2], [0, 0]]
+        self.assertEqual(x + y, result)
 
-    x = self.mp([[1, 2], [0, 0]])
-    y = self.mp([[-1, -2], [0, 0]])
-    result = self.mp([[0, 0], [0, 0]])
-    self.assertEqual(x + y, result)
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[-1, -2], [0, 0]])
+        result = [[0, 0], [0, 0]]
+        self.assertEqual(x + y, result)
 
-    x = self.mp([[1, 2], [0, 0]])
-    y = self.mp([[1.5, 2.5], [0.5, 0.5]])
-    result = self.mp([[2.5, 4.5], [0.5, 0.5]])
-    self.assertEqual(x + y, result)
-
-    x = self.mp([[1, 2], [0, 0]])
-    y = self.mp([[1, 2], [3, 4]])
-    with self.assertRaises(ValueError):
-        x + y
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[1.5, 2.5], [0.5, 0.5]])
+        result = [[2.5, 4.5], [0.5, 0.5]]
+        self.assertEqual(x + y, result)
+          
+        x = self.mp([1,2])
+        y = self.mp([2,3])
+        self.assertEqual(x+y,[3,5])
         
-    x = self.mp([1, 2])
-    y = self.mp([2,3])
-    self.assertEqual(x+y, [3,5])
-    
-    def test_sub(self):
-        x = self.mp([[1,2],[3,4]])
-        # self.assertEquals(x-x,[[0,0],[0,0]])
+
+
     
             
 if __name__ == '__main__':
