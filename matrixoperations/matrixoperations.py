@@ -43,11 +43,15 @@ class MatrixOperations:
             if self.shape == other.shape:
                 result = []
                 row, col = self.shape
-                for i in range(row):
-                    row_result = []
-                    for j in range(col):
-                        row_result.append(self.matrix[i][j] + other.matrix[i][j])
-                    result.append(row_result)
+                if (col != 1):
+                    for i in range(row):
+                        row_result = []
+                        for j in range(col):
+                            row_result.append(self.matrix[i][j] + other.matrix[i][j])
+                        result.append(row_result)
+                else:
+                    for i in range(row):
+                        result.append(self.matrix[i] + other.matrix[i])
                 return result
             else:
                 raise ValueError("Matrices must have the same dimensions to add")
@@ -58,7 +62,24 @@ class MatrixOperations:
         
 
     def __sub__(self,other):
-       pass
+        if isinstance(other, type(self)):
+            if self.shape == other.shape:
+                result = []
+                row, col = self.shape
+                if (col != 1):
+                    for i in range(row):
+                        row_result = []
+                        for j in range(col):
+                            row_result.append(self.matrix[i][j] - other.matrix[i][j])
+                        result.append(row_result)
+                else:
+                    for i in range(row):
+                        result.append(self.matrix[i] - other.matrix[i])
+                return result
+            else:
+                raise ValueError("Matrices must have the same dimensions to add")
+        else:
+            raise TypeError("Unsupported operand type(s) for +: '{}' and '{}'".format(type(self).__name__, type(other).__name__))
 
     def __mul__(self,other):
         pass
