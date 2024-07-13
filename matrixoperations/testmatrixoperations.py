@@ -67,7 +67,29 @@ class MatrixOperationsTestCase(unittest.TestCase):
         y = self.mp([2,3])
         self.assertEqual(x+y,[3,5])
         
+    def test_subtraction(self):
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[1, 2], [0, 0]])
+        self.assertEqual(x - y, [[0, 0], [0, 0]])
 
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[0, 0], [0, 0]])
+        result = [[1, 2], [0, 0]]
+        self.assertEqual(x - y, result)
+
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[-1, -2], [0, 0]])
+        result = [[2, 4], [0, 0]]
+        self.assertEqual(x - y, result)
+
+        x = self.mp([[1, 2], [0, 0]])
+        y = self.mp([[1.5, 2.5], [0.5, 0.5]])
+        result = [[-0.5, -0.5], [-0.5, -0.5]]
+        self.assertEqual(x - y, result)
+          
+        x = self.mp([1,2])
+        y = self.mp([2,3])
+        self.assertEqual(x-y,[-1,-1])
 
     
             
