@@ -39,6 +39,20 @@ class MatrixOperations:
             
     
     def __add__(self, other):
+        
+        """
+        Adds another matrix or vector to this matrix or vector.
+
+        Args:
+            other (Matrix or list): The matrix or vector to add.
+
+        Raises:
+            ValueError: If the matrices or vectors do not have the same dimensions.
+            TypeError: If the other operand is not a Matrix instance or a list (vector).
+
+        Returns:
+            Matrix or list: A new Matrix instance or list representing the sum.
+        """
         if isinstance(other, type(self)):
             if self.shape == other.shape:
                 result = []
@@ -62,6 +76,19 @@ class MatrixOperations:
         
 
     def __sub__(self,other):
+        """
+        Subtracts another matrix or vector from this matrix or vector.
+
+        Args:
+            other (Matrix or list): The matrix or vector to subtract.
+
+        Raises:
+            ValueError: If the matrices or vectors do not have the same dimensions.
+            TypeError: If the other operand is not a Matrix instance or a list (vector).
+
+        Returns:
+            Matrix or list: A new Matrix instance or list representing the difference.
+        """
         if isinstance(other, type(self)):
             if self.shape == other.shape:
                 result = []
@@ -79,9 +106,22 @@ class MatrixOperations:
             else:
                 raise ValueError("Matrices must have the same dimensions to add")
         else:
-            raise TypeError("Unsupported operand type(s) for +: '{}' and '{}'".format(type(self).__name__, type(other).__name__))
+            raise TypeError("Unsupported operand type(s) for -: '{}' and '{}'".format(type(self).__name__, type(other).__name__))   
 
     def __mul__(self,other):
+        """
+        Multiplies another matrix or vector with this matrix or vector.
+
+        Args:
+            other (Matrix or list): The matrix or vector to subtract.
+
+        Raises:
+            ValueError: If the matrices or vectors do not have the same dimensions.
+            TypeError: If the other operand is not a Matrix instance or a list (vector).
+
+        Returns:
+            Matrix or list: A new Matrix instance or list representing the difference.
+        """
         pass
 
     def __floordiv__(self,other):
