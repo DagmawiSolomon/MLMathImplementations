@@ -124,7 +124,16 @@ class MatrixOperations:
         """
         pass
 
-    def __floordiv__(self,other):
+    def __truediv__(self,other):
+        """
+        Performs division of the matrix by either a scalar or another matrix.
+
+        Args:
+            other (int, float, Matrix): The scalar or matrix to divide by.
+
+        Returns:
+            Matrix: A new Matrix instance representing the result of the division.
+        """
         pass
 
     def determinent(self):
