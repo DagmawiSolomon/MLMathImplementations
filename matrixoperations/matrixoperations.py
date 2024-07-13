@@ -113,14 +113,14 @@ class MatrixOperations:
         Multiplies another matrix or vector with this matrix or vector.
 
         Args:
-            other (Matrix or list): The matrix or vector to subtract.
+            other (Matrix or list): The matrix or vector to multiply.
 
         Raises:
             ValueError: If the matrices or vectors do not have the same dimensions.
             TypeError: If the other operand is not a Matrix instance or a list (vector).
 
         Returns:
-            Matrix or list: A new Matrix instance or list representing the difference.
+            Matrix or list: A new Matrix instance or list representing the product.
         """
         pass
 
