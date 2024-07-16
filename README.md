@@ -6,7 +6,7 @@ Welcome to the **ML and Math Topics Implementations in Python** repository! This
 
 1. [Introduction](#introduction)
 2. [Linear Algebra](#linear-algebra)
-    - [Matrix Calculator](#matrix-calculator)
+    - [Matrix Calculator](matrixoperations/)
 3. [Calculus](#calculus)
 
 ## Introduction
