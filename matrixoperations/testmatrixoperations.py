@@ -90,7 +90,29 @@ class MatrixOperationsTestCase(unittest.TestCase):
         x = self.mp([1,2])
         y = self.mp([2,3])
         self.assertEqual(x-y,[-1,-1])
+        
+    
+    def test_multiplication(self):
+        x = self.mp([[1, 2], [3, 4]])
+        y = self.mp([[2, 0], [1, 3]])
+        self.assertEqual(x * y, [[4, 6], [10, 12]])
 
+        x = self.mp([[1, 2, 3], [4, 5, 6]])
+        y = self.mp([[7, 8], [9, 10], [11, 12]])
+        self.assertEqual(x * y, [[58, 64], [139, 154]])
+
+        x = self.mp([[0, 0], [0, 0]])
+        y = self.mp([[1, 2], [3, 4]])
+        self.assertEqual(x * y, [[0, 0], [0, 0]])
+
+        x = self.mp([[1, 2], [3, 4]])
+        y = self.mp([[1, 0], [0, 1]])
+        self.assertEqual(x * y, [[1, 2], [3, 4]])
+
+        x = self.mp([[1]])
+        y = self.mp([[2]])
+        self.assertEqual(x * y, [[2]])
+        
     
             
 if __name__ == '__main__':
