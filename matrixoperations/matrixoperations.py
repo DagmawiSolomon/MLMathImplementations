@@ -148,7 +148,19 @@ class MatrixOperations:
         Returns:
             list: A new list representing the product of matrices or vectors.
         """
-        pass
+      
+        n = len(self.matrix)         
+        m = len(self.matrix[0])    
+        p = len(other.matrix[0])   
+
+        result = [[0] * p for _ in range(n)]
+
+        for i in range(n):
+            for j in range(p):
+                for k in range(m):
+                    result[i][j] += self.matrix[i][k] * other.matrix[k][j]
+
+        return result
 
     def __truediv__(self, other):
         """
