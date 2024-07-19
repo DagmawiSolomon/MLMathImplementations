@@ -134,7 +134,7 @@ class MatrixOperations:
         else:
             raise TypeError("Unsupported operand type(s) for -: '{}' and '{}'".format(type(self).__name__, type(other).__name__))
 
-    def __mul__(self, other):
+    def __mul__(self, other): # Implement scalar multiplication
         """
         Multiplies another matrix or vector with this matrix or vector.
 
@@ -209,3 +209,130 @@ class MatrixOperations:
             list: A list of eigenvectors of the matrix.
         """
         pass
+    
+    def hadmard_product(self):
+        """
+        Calculates the Element-wise Multiplication (Hadamard Product) of the matrix.
+
+        Returns:
+            list: A new list representing the Hadamard product of the matrix.
+        """
+        pass
+    
+    
+    def transpose(self):
+        """
+        Calculates the transpose of the matrix.
+
+        Returns:
+            list: A new list representing the transpose of the matrix.
+        """
+        pass
+    
+    def trace(self):
+        """
+        Calculates the trace of the matrix.
+
+        Returns:
+            list: A new list representing the trace of the matrix.
+        """
+        pass
+    
+    
+    def svd(self):
+        """
+        Calculates the trace of the matrix.
+
+        Returns:
+            list: A new list representing the trace of the matrix.
+        """
+        pass
+    
+    def ludecomposition(self):
+        """
+        Calculates the LU Decompostion of the matrix.
+
+        Returns:
+            list: A new list representing the LU Decompostion of the matrix.
+        """
+        pass
+    
+    def qr_decomposition(self):
+        """
+        Calculates the QR Decomposition of the matrix.
+
+        Returns:
+            list: A new list representing the QR Decompostion of the matrix.
+        """
+        pass
+    
+    def cholesky_decomposition(self):
+        """
+        Calculates the Cholesky Decomposition of the matrix.
+
+        Returns:
+            list: A new list representing the Cholesky Decomposition of the matrix.
+        """
+        pass
+        
+    def matrix_norms(self):
+        """
+        Calculates the Matrix Norms of the matrix.
+
+        Returns:
+            list: A new list representing the Matrix norms of the matrix.
+        """
+        pass
+    
+    def moore_penrose_pseudoinverse(self):
+        """
+        Calculates the Moore-Penrose Pseudoinverse of the matrix.
+
+        Returns:
+            list: A new list representing the Moore-Penrose Pseudoinverse of the matrix.
+        """
+        pass
+        
+    def covariance_matrix(self):
+        """
+        Calculates the Covariance Matrix of the matrix.
+
+        Returns:
+            list: A new list representing the Covariance Matrix of the matrix.
+        """
+        pass
+    
+    def correlation_matrix(self):
+        """
+        Calculates the Correlation Matrix of the matrix.
+
+        Returns:
+            list: A new list representing the Correlation Matrix of the matrix.
+        """
+        pass
+    
+    def gram_matrix(self):
+        """
+        Calculates the Correlation Matrix of the matrix.
+
+        Returns:
+            list: A new list representing the Correlation Matrix of the matrix.
+        """
+        pass
+    
+    def projection_matrix(self):
+        """
+        Calculates the Projection Matrix of the matrix.
+
+        Returns:
+            list: A new list representing the Projection Matrix of the matrix.
+        """
+        pass
+        
+
+
+    
+        
+        
+    
+    
